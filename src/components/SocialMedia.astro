@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+import { socialLinks } from "../data";
+---
+
+<div class="flex space-x-6 mt-4 justify-center ">
+    {
+        socialLinks.map((social) => (
+            <a
+                href={social.href}
+                target="_blank"
+                class="text-gray-400 hover:text-primary-400 transition-transform transform hover:scale-110"
+            >
+                <Icon name={social.name} class="h-8 w-8 md:h-9 md:w-9" />
+            </a>
+        ))
+    }
+</div>

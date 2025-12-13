@@ -1,0 +1,18 @@
+---
+import { projects } from "../data";
+import { ProjectCard } from "../react-components";
+
+---
+
+<section class="p-10 bg-gray-800 text-gray-100">
+  <div class="container-custom text-center">
+    <h3 class="md:text-4xl text-3xl font-bold mb-4 text-violet-400">My Projects</h3>
+    <p class="text-gray-400 mb-10">Here are some projects I've worked on recently.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </div>
+</section>

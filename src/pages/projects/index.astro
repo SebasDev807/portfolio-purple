@@ -1,0 +1,29 @@
+---
+import { projects } from "../../data";
+import Layout from "../../layouts/Layout.astro";
+import { ProjectCard } from "../../react-components";
+
+// ProjectsPage.astro
+
+
+  // Agrega más proyectos aquí...
+
+---
+
+<Layout>
+  <section class="p-12 bg-gray-900 text-gray-100 min-h-screen">
+    <div class="container-custom text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-violet-400 mb-12">
+        My Projects
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {
+          projects.map((project, index) => (
+            <ProjectCard client:load {...project} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

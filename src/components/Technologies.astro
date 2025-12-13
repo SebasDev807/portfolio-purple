@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Technology {
+  color?: string;
+  name: string;
+  iconName: string;
+  link: string;
+}
+
+const technologies: Technology[] = [
+  {
+    iconName: "react",
+    name: "React",
+    color: "text-cyan-500",
+    link: "https://reactjs.org/",
+  },
+  {
+    iconName: "nextjs",
+    name: "Next.js",
+    color: "text-black",
+    link: "https://nextjs.org/",
+  },
+  {
+    iconName: "nestjs",
+    name: "NestJS",
+    color: "text-red-500",
+    link: "https://docs.nestjs.com/",
+  },
+  {
+    iconName: "java",
+    name: "Java",
+    color: "text-red-600",
+    link: "https://www.oracle.com/java/",
+  },
+  {
+    iconName: "postgres",
+    name: "PostgreSQL",
+    color: "text-blue-600",
+    link: "https://www.postgresql.org/docs/",
+  },
+  {
+    iconName: "mongo",
+    name: "MongoDB",
+    color: "text-green-500",
+    link: "https://www.mongodb.com/docs/",
+  },
+  {
+    iconName: "spring",
+    name: "Spring Boot",
+    color: "text-green-500",
+    link: "https://spring.io/projects/spring-boot",
+  },
+];
+---
+
+
+  <div class="container-custom text-center">
+
+    <ul class="flex justify-center items-center gap-6 flex-wrap">
+      {technologies.map((tech) => (
+        <li class="flex flex-col items-center space-y-2">
+          <a
+            href={tech.link}
+            target="_blank"
+            class="cursor-pointer flex flex-col items-center space-y-2  transition-all duration-200 rounded-lg p-2"
+            aria-label={`Documentation of ${tech.name}`}
+          >
+            <Icon name={tech.iconName} class={`h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 ${tech.color}`} />
+            <span class="text-gray-300 text-sm md:text-base lg:text-base">{tech.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+

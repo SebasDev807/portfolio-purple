@@ -1,0 +1,79 @@
+---
+import Slogan from "../../components/Slogan.astro";
+import SocialMedia from "../../components/SocialMedia.astro";
+import Technologies from "../../components/Technologies.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout metaTitle="Portfolio | About">
+  <section id="about" class="py-24 bg-gray-900 text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-center">
+      <!-- Left: Biography (ocupa 2 columnas) -->
+      <div class="md:col-span-2 text-lg space-y-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-violet-400 mb-6">
+          About Me
+        </h2>
+
+        <p class="text-gray-300 leading-relaxed">
+          I'm Juan Sebastián Astudillo, a Full-Stack Developer born on July 8,
+          2003, originally from Popayán, Colombia, and currently based in
+          Medellín, Antioquia. I'm also a dedicated <strong
+            >Software Development student</strong
+          >, constantly learning and improving my skills.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          I specialize in building modern, high-performance web applications
+          using technologies like <strong>React</strong>, <strong>Astro</strong
+          >,
+          <strong>TypeScript</strong>, <strong>Node.js</strong>,
+          <strong>Tailwind CSS</strong>, <strong>React Three Fiber</strong>
+          and <strong>Three.js</strong>.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          I'm passionate about solving real problems through clean architecture,
+          scalability, and seamless user experiences. I enjoy exploring visual
+          Web 3D, interactive interfaces, and efficient backend systems.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          I'm proactive, detail-oriented, and driven by curiosity—I love
+          understanding the <em>"why"</em> behind things and constantly push myself
+          to grow as a developer.
+        </p>
+
+        <div class="mt-6 max-w-xl">
+          <Slogan leftQuote />
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="flex flex-col justify-center md:justify-end">
+        <img
+          src="/me_front.png"
+          alt="Juan Sebastián Astudillo"
+          class="w-full max-w-sm object-cover rounded-xl shadow-xl"
+        />
+        <SocialMedia />
+      </div>
+    </div>
+
+    <!-- Technologies Section -->
+    <section class="flex flex-col items-center text-center mt-16 px-4">
+      <h3
+        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-violet-400"
+      >
+        Technologies I Use
+      </h3>
+
+      <p class="text-gray-400 mb-10 text-base md:text-lg max-w-xl">
+        These are some of the technologies I work with daily.
+      </p>
+
+      <div class="flex justify-center flex-wrap gap-6">
+        <Technologies />
+      </div>
+    </section>
+  </section>
+</Layout>

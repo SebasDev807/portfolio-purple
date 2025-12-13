@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<Layout>
+  <section id="about" class="py-24 bg-gray-900 text-gray-100">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Left: Biography -->
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-violet-400 mb-6">
+          About Me
+        </h2>
+
+        <p class="text-gray-300 leading-relaxed mb-4">
+          I'm Juan Sebastián Astudillo, a Full-Stack Developer born on July 8, 2003, originally from Popayán, Colombia, and currently based in Medellín, Antioquia.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed mb-4">
+          I specialize in building modern, high-performance web applications using technologies like <strong>React</strong>, <strong>Astro</strong>, <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>Tailwind CSS</strong>, <strong>React Three Fiber</strong>, and <strong>Three.js</strong>.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed mb-4">
+          I'm passionate about solving real problems through clean architecture, scalability, and seamless user experiences. I enjoy exploring visual Web 3D, interactive interfaces, and efficient backend systems.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          I'm proactive, detail-oriented, and driven by curiosity—I love understanding the <em>"why"</em> behind things and constantly push myself to grow as a developer.
+        </p>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="flex justify-center itemx md:justify-end">
+        <img
+          src="/me_front.png"
+          alt="Juan Sebastián Astudillo"
+          class="w-72 h-72 object-cover rounded-xl shadow-xl border border-gray-700"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>
