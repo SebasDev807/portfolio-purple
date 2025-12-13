@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
         rating: 4,
     },
     {
-        name: "Santiago",
+        name: "Santiago Torres",
         role: "Teammate",
         text: "Works efficiently and quickly, able to adapt to changing requirements without losing focus. Communicates clearly and effectively, helping the team stay aligned. Reliable under pressure and consistently finds practical solutions to challenges, making him a strong contributor to any project.",
         rating: 5,

@@ -12,7 +12,7 @@ export const TestimonialCard = ({ text, rating, role, name }: TestimonialCardPro
 
   return (
 
-    <article className="bg-gray-800 w-100 h-80 relative rounded-lg shadow-xl overflow-hidden flex flex-col justify-between ">
+    <article className="bg-gray-800 md:w-100 h-80 relative rounded-lg shadow-xl overflow-hidden flex flex-col justify-between ">
 
       {/* Rating con estrellas */}
       <div className="flex gap-1 mt-3 px-4">

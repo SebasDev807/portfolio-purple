@@ -10,14 +10,14 @@ import { ContactForm } from "../../react-components";
     <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row gap-12">
       
       <!-- Left: Contact Form -->
-      <div class="flex-1">
+      <div>
         <h2 class="text-3xl md:text-4xl font-bold text-violet-400 mb-6">
           Contact Me
         </h2>
         <p class="text-gray-400 mb-6">
           Have a project in mind or just want to say hi? Fill out the form below and I'll get back to you!
         </p>
-        <ContactForm />
+        <ContactForm client:load/>
       </div>
 
       <!-- Right: Social Links -->

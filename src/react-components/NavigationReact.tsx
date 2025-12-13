@@ -16,8 +16,8 @@ export const NavigationReact = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800 px-8 py-3">
-      <div className="container-custom">
+    <nav className="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800 px-2 py-3">
+      
         <div className="flex justify-between items-center h-16">
           <a href="/" className="flex items-center space-x-2">
             <img src='/logo.webp' className='w-65' />
@@ -74,7 +74,7 @@ export const NavigationReact = () => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/contact"
                 className="btn-primary w-full text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -83,7 +83,7 @@ export const NavigationReact = () => {
             </div>
           </div>
         )}
-      </div>
+   
     </nav>
   );
 };

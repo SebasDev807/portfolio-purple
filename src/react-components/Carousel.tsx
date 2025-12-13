@@ -25,6 +25,20 @@ export function Carousel<T>({ items, renderItem }: CarouselProps<T>) {
       pagination={{ clickable: true }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
+      breakpoints={{
+        0: {          //  (móviles)
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+        640: {        //  (tablets)
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {       //  (desktop)
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
     >
       {items.map((item, i) => (
         <SwiperSlide key={i}>
