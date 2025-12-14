@@ -22,6 +22,12 @@ const technologies: Technology[] = [
     link: "https://nextjs.org/",
   },
   {
+    iconName: "astro",
+    name: "Astro",
+    link: "https://astro.build/",
+    color: "text-red-600",
+  },
+  {
     iconName: "nestjs",
     name: "NestJS",
     color: "text-red-500",
@@ -30,7 +36,6 @@ const technologies: Technology[] = [
   {
     iconName: "java",
     name: "Java",
-    color: "text-red-600",
     link: "https://www.oracle.com/java/",
   },
   {
@@ -51,14 +56,19 @@ const technologies: Technology[] = [
     color: "text-green-500",
     link: "https://spring.io/projects/spring-boot",
   },
+  {
+    iconName: "nodejs",
+    name: "NodeJS",
+    color: "text-green-400",
+    link: "https://spring.io/projects/spring-boot",
+  },
 ];
 ---
 
-
-  <div class="container-custom text-center">
-
-    <ul class="flex justify-center items-center gap-6 flex-wrap">
-      {technologies.map((tech) => (
+<div class="container-custom text-center">
+  <ul class="flex justify-center items-center gap-6 flex-wrap">
+    {
+      technologies.map((tech) => (
         <li class="flex flex-col items-center space-y-2">
           <a
             href={tech.link}
@@ -66,11 +76,16 @@ const technologies: Technology[] = [
             class="cursor-pointer flex flex-col items-center space-y-2  transition-all duration-200 rounded-lg p-2"
             aria-label={`Documentation of ${tech.name}`}
           >
-            <Icon name={tech.iconName} class={`h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 ${tech.color}`} />
-            <span class="text-gray-300 text-sm md:text-base lg:text-base">{tech.name}</span>
+            <Icon
+              name={tech.iconName}
+              class={`h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 ${tech.color}`}
+            />
+            <span class="text-gray-300 text-sm md:text-base lg:text-base">
+              {tech.name}
+            </span>
           </a>
         </li>
-      ))}
-    </ul>
-  </div>
-
+      ))
+    }
+  </ul>
+</div>
